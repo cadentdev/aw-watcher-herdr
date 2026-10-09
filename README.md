@@ -80,13 +80,13 @@ Use `--no-agents` to turn this bucket off.
 
 Paste these into ActivityWatch's **Query** view.
 
-Time you spent in herdr per project, counting only time when the terminal was the active window and you weren't AFK. Change `"Ghostty"` to your terminal app's name:
+Time you spent in herdr per project, counting only time when the terminal was the active window and you weren't AFK. Change `"iTerm2"` to your terminal app's name as ActivityWatch sees it (e.g. `"Ghostty"`, `"Terminal"`, `"WezTerm"`):
 
 ```
 afk = flood(query_bucket(find_bucket("aw-watcher-afk_")));
 not_afk = filter_keyvals(afk, "status", ["not-afk"]);
 window = filter_period_intersect(flood(query_bucket(find_bucket("aw-watcher-window_"))), not_afk);
-terminal = filter_keyvals(window, "app", ["Ghostty"]);
+terminal = filter_keyvals(window, "app", ["iTerm2"]);
 herdr = filter_period_intersect(flood(query_bucket(find_bucket("aw-watcher-herdr_"))), terminal);
 RETURN = sort_by_duration(merge_events_by_keys(herdr, ["project"]));
 ```
