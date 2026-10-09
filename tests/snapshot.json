@@ -1,0 +1,30 @@
+{
+ "id": "cli:api:snapshot",
+ "result": {
+  "type": "session_snapshot",
+  "snapshot": {
+   "version": "0.9.3",
+   "protocol": 22,
+   "focused_workspace_id": "w1",
+   "focused_tab_id": "w1:t2",
+   "focused_pane_id": "w1:p2",
+   "workspaces": [
+    {"workspace_id": "w1", "label": "work", "number": 1, "focused": true, "active_tab_id": "w1:t2", "agent_status": "working", "pane_count": 3, "tab_count": 2}
+   ],
+   "tabs": [
+    {"tab_id": "w1:t1", "workspace_id": "w1", "label": "shell", "number": 1, "focused": false, "agent_status": "unknown", "pane_count": 1},
+    {"tab_id": "w1:t2", "workspace_id": "w1", "label": "agents", "number": 2, "focused": true, "agent_status": "working", "pane_count": 2}
+   ],
+   "panes": [
+    {"pane_id": "w1:p1", "tab_id": "w1:t1", "workspace_id": "w1", "focused": false, "agent_status": "unknown", "cwd": "/tmp", "foreground_cwd": "/tmp"},
+    {"pane_id": "w1:p2", "tab_id": "w1:t2", "workspace_id": "w1", "focused": true, "agent_status": "idle", "cwd": "/home/me/src/widget", "foreground_cwd": "/home/me/src/widget/docs"},
+    {"pane_id": "w1:p3", "tab_id": "w1:t2", "workspace_id": "w1", "focused": false, "agent_status": "working", "cwd": "/home/me/src/gadget", "foreground_cwd": "/home/me/src/gadget"}
+   ],
+   "agents": [
+    {"pane_id": "w1:p2", "tab_id": "w1:t2", "workspace_id": "w1", "agent": "claude", "agent_status": "idle", "focused": true, "cwd": "/home/me/src/widget", "foreground_cwd": "/home/me/src/widget/docs", "terminal_title_stripped": "Write the docs"},
+    {"pane_id": "w1:p3", "tab_id": "w1:t2", "workspace_id": "w1", "agent": "codex", "agent_status": "working", "focused": false, "cwd": "/home/me/src/gadget", "foreground_cwd": "/home/me/src/gadget", "terminal_title_stripped": "Fix flaky test"}
+   ],
+   "layouts": []
+  }
+ }
+}

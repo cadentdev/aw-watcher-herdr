@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aw-watcher-herdr"
+dynamic = ["version"]
+description = "ActivityWatch watcher for the herdr terminal multiplexer: tracks focused panes and AI agent activity"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Cadent Development" }]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["activitywatch", "herdr", "time-tracking", "ai-agents", "terminal"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/cadentdev/aw-watcher-herdr"
+
+[project.scripts]
+aw-watcher-herdr = "aw_watcher_herdr.watcher:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "aw_watcher_herdr.__version__" }
