@@ -1,5 +1,12 @@
 # aw-watcher-herdr
 
+> **Archived.** This project is no longer maintained. Please use
+> [simensollie/aw-watcher-herdr](https://github.com/simensollie/aw-watcher-herdr) instead.
+> It has the same split between your focus and your agents' activity, and is more complete.
+> To get the near-real-time agent events this repo had, set `max_run_seconds = 300`.
+> Deriving the project from the git repository has been proposed upstream in
+> [simensollie/aw-watcher-herdr#4](https://github.com/simensollie/aw-watcher-herdr/issues/4).
+
 An [ActivityWatch](https://activitywatch.net) watcher for [herdr](https://github.com/herdrdev/herdr), the terminal multiplexer for AI coding agents.
 
 It records two things:
